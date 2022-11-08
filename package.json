@@ -8,7 +8,9 @@
     "start-server": "node ./src/server/server.js",
     "server-start": "node ./src/server/server.js",
     "eslint": "eslint ./",
-    "ut":"npx mocha 'src/**/*.test.js' --recursive --require @babel/register"
+    "ut": "npx mocha 'src/**/*.test.js' --recursive --require @babel/register",
+    "mock": "npx mocha 'src/data_handlers/mocking_unit.test.js' --recursive --require @babel/register",
+    "nyc": "nyc --reporter=text npm run ut"
   },
   "repository": {
     "type": "git",
@@ -32,7 +34,9 @@
     "axios": "^0.19.2",
     "chai": "^4.3.6",
     "express": "^4.17.1",
-    "sinon": "^14.0.1"
+    "nock": "^13.2.9",
+    "sinon": "^14.0.1",
+    "supertest": "^6.3.1"
   },
   "devDependencies": {
     "eslint": "^7.10.0",
